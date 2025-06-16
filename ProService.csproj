@@ -1,0 +1,320 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{20B81B31-5A8B-445F-8A34-8C459BF00529}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ProService</RootNamespace>
+    <AssemblyName>ProService</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FontAwesome.Sharp, Version=6.6.0.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
+      <HintPath>packages\FontAwesome.Sharp.6.6.0\lib\net472\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Data.cs" />
+    <Compile Include="Model\DataModel.cs" />
+    <Compile Include="ProviderForms\BankingDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProviderForms\BankingDetails.Designer.cs">
+      <DependentUpon>BankingDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Booking.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Booking.Designer.cs">
+      <DependentUpon>Booking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\BookingService.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BookingService.Designer.cs">
+      <DependentUpon>BookingService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CustomerProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CustomerProfile.Designer.cs">
+      <DependentUpon>CustomerProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Edit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Edit.Designer.cs">
+      <DependentUpon>Edit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\IndividualServices.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\IndividualServices.Designer.cs">
+      <DependentUpon>IndividualServices.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProviderForms\Feedback.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProviderForms\Feedback.Designer.cs">
+      <DependentUpon>Feedback.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProviderForms\ProviderBookings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProviderForms\ProviderBookings.Designer.cs">
+      <DependentUpon>ProviderBookings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProviderForms\ProviderEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProviderForms\ProviderEdit.Designer.cs">
+      <DependentUpon>ProviderEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProviderForms\ProviderProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProviderForms\ProviderProfile.Designer.cs">
+      <DependentUpon>ProviderProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ProviderView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\ProviderView.Designer.cs">
+      <DependentUpon>ProviderView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Receipt.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Receipt.Designer.cs">
+      <DependentUpon>Receipt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ServiceReport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\ServiceReport.Designer.cs">
+      <DependentUpon>ServiceReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Services.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Services.Designer.cs">
+      <DependentUpon>Services.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Transactions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Transactions.Designer.cs">
+      <DependentUpon>Transactions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ProviderDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProviderDashboard.Designer.cs">
+      <DependentUpon>ProviderDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProviderForms\providerTransactions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProviderForms\providerTransactions.Designer.cs">
+      <DependentUpon>providerTransactions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProviderForms\ServiceReceipt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProviderForms\ServiceReceipt.Designer.cs">
+      <DependentUpon>ServiceReceipt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProviderForms\ServiceRequest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProviderForms\ServiceRequest.Designer.cs">
+      <DependentUpon>ServiceRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProviderSignup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProviderSignup.Designer.cs">
+      <DependentUpon>ProviderSignup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Signup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Signup.Designer.cs">
+      <DependentUpon>Signup.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ProviderForms\BankingDetails.resx">
+      <DependentUpon>BankingDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Booking.resx">
+      <DependentUpon>Booking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\BookingService.resx">
+      <DependentUpon>BookingService.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CustomerProfile.resx">
+      <DependentUpon>CustomerProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Edit.resx">
+      <DependentUpon>Edit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\IndividualServices.resx">
+      <DependentUpon>IndividualServices.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProviderForms\Feedback.resx">
+      <DependentUpon>Feedback.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProviderForms\ProviderBookings.resx">
+      <DependentUpon>ProviderBookings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProviderForms\ProviderEdit.resx">
+      <DependentUpon>ProviderEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProviderForms\ProviderProfile.resx">
+      <DependentUpon>ProviderProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ProviderView.resx">
+      <DependentUpon>ProviderView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Receipt.resx">
+      <DependentUpon>Receipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ServiceReport.resx">
+      <DependentUpon>ServiceReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Services.resx">
+      <DependentUpon>Services.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Transactions.resx">
+      <DependentUpon>Transactions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="ProviderDashboard.resx">
+      <DependentUpon>ProviderDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProviderForms\providerTransactions.resx">
+      <DependentUpon>providerTransactions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProviderForms\ServiceReceipt.resx">
+      <DependentUpon>ServiceReceipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProviderForms\ServiceRequest.resx">
+      <DependentUpon>ServiceRequest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProviderSignup.resx">
+      <DependentUpon>ProviderSignup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Signup.resx">
+      <DependentUpon>Signup.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PrOconnect %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PrOconnect %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\poolcleaning.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\carwash.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\laundry.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\house cleaning.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mowing.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plumbing.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Controller\" />
+    <Folder Include="View\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
